@@ -15,6 +15,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+one is global the other is local causing them to have different results
 
 ## Question 2
 
@@ -32,7 +33,10 @@ function f1()
 console.log(f1())
 console.log(y)
 ```
-
+ 10 - x
+ undefined - y
+x is defined as a global variable and when we consoled (f1()) the output will be 10.
+y is defined inside the function and when we consoled y outside the function we will get an error "y is not defined". 
 What will be the output of this code. Explain your answer in 50 words or less.
 
 ## Question 3
@@ -62,3 +66,7 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+9
+x: 10 
+f1(x) will return 10, x will stays same (9) because x is a constant and cannot be changed.
+The function f2(y) will return {x:10} because y is an object and object property can be changed
